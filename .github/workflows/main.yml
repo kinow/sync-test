@@ -1,0 +1,14 @@
+name: CICD
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Do something
+        uses: actions/checkout@v3
